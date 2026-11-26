@@ -163,15 +163,15 @@
     background: #FFFFFF;
     border: 3px solid #1E293B;
     border-radius: 50px;
-    padding: 8px 15px;
+    padding: 8px 14px;
     font-family: 'Fredoka', sans-serif;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     cursor: pointer;
     box-shadow: 0 4px 0 #1E293B;
     transition: transform 0.1s;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
   }
 
   .btn-pill:active {
@@ -183,7 +183,7 @@
     background: #92400E;
     border: 4px solid #451A03;
     border-radius: 20px;
-    padding: 10px 26px;
+    padding: 10px 24px;
     text-align: center;
     color: #FEF3C7;
     box-shadow: 0 6px 0 #451A03;
@@ -191,11 +191,11 @@
 
   .title-board h2 {
     font-family: 'Fredoka', sans-serif;
-    font-size: clamp(1.25rem, 2.6vw, 1.9rem);
+    font-size: clamp(1.2rem, 2.5vw, 1.85rem);
   }
 
   .title-board p {
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     color: #FDE68A;
     font-weight: 700;
   }
@@ -601,14 +601,14 @@
         <div class="id-box">
           <h3>📌 Identitas Media</h3>
           <p><b>Mata Pelajaran:</b> Bahasa Indonesia</p>
-          <p><b>Sasaran:</b> Siswa Kelas II SD</p>
+          <p><b>Sasaran:</b> Siswa Kelas II SD (Fase A)</p>
           <p><b>Materi Pokok:</b> Fungsi &amp; Intonasi Tanda Baca (<code>.</code> <code>,</code> <code>?</code> <code>!</code>)</p>
           <p><b>Jenis Media:</b> Web Interaktif Eksploratif</p>
         </div>
 
         <div class="id-box">
           <h3>👥 Identitas Kelompok Penyusun</h3>
-          <p><b>Kelompok II:</b></p>
+          <p><b>Kelompok II (Kelas 5D):</b></p>
           <ul>
             <li>Ompypa Reva Ristyaningtyas</li>
             <li>Rifa Dwi Saharani</li>
@@ -631,6 +631,7 @@
     <div class="nav-buttons">
       <button type="button" class="btn-pill" onclick="goToScreen('screenIntro')">👥 Identitas</button>
       <button type="button" class="btn-pill" onclick="openInfo('petunjuk')">❓ Petunjuk</button>
+      <button type="button" class="btn-pill" onclick="openInfo('capaian')">📋 Capaian</button>
       <button type="button" class="btn-pill" onclick="openInfo('tujuan')">🎯 Tujuan</button>
     </div>
     <div class="title-board">
@@ -893,10 +894,10 @@
 
     modalBox.classList.remove('feedback-box');
     document.getElementById('modalCloseBtn').style.display = 'block';
-    header.style.background = "#0D9488";
     body.classList.add('single-col');
 
     if (type === 'petunjuk') {
+      header.style.background = "#0D9488";
       document.getElementById('modalTitle').innerText = "❓ PETUNJUK BELAJAR";
       body.innerHTML = `
         <div class="panel-section" style="font-size:1.05rem; line-height:1.7;">
@@ -907,7 +908,24 @@
           <p>5. Setelah menjelajahi semua bangunan, klik tombol <b>Lanjut ke Evaluasi Pembelajaran</b> di bagian bawah.</p>
         </div>
       `;
+    } else if (type === 'capaian') {
+      header.style.background = "#2B6CB0";
+      document.getElementById('modalTitle').innerText = "📋 CAPAIAN PEMBELAJARAN (FASE A — KELAS II SD)";
+      body.innerHTML = `
+        <div class="panel-section" style="font-size:1.03rem; line-height:1.7;">
+          <p style="margin-bottom:8px;"><b>Mata Pelajaran:</b> Bahasa Indonesia (Fase A / Kelas II SD)</p>
+          <div style="background:#EFF6FF; border-left:5px solid #2B6CB0; padding:12px 14px; border-radius:12px; margin-bottom:10px;">
+            <p><b>Elemen Membaca dan Memirsa:</b><br>
+            Peserta didik mampu membaca kata-kata yang dikenalinya sehari-hari dengan fasih serta memahami informasi dari bacaan dan tayangan yang dipirsa tentang diri dan lingkungan, narasi imajinatif, dan puisi anak dengan memperhatikan <b>penggunaan tanda baca dasar dan intonasi yang tepat</b>.</p>
+          </div>
+          <div style="background:#FEFCE8; border-left:5px solid #D97706; padding:12px 14px; border-radius:12px;">
+            <p><b>Elemen Menulis:</b><br>
+            Peserta didik mampu menunjukkan keterampilan menulis permulaan dengan benar dan mengembangkan tulisan tangan yang semakin baik, termasuk <b>menerapkan tanda baca titik (.), koma (,), tanda tanya (?), dan tanda seru (!)</b> pada kalimat sederhana sesuai konteks.</p>
+          </div>
+        </div>
+      `;
     } else {
+      header.style.background = "#0D9488";
       document.getElementById('modalTitle').innerText = "🎯 TUJUAN PEMBELAJARAN";
       body.innerHTML = `
         <div class="panel-section" style="font-size:1.05rem; line-height:1.7;">
