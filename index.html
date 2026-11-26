@@ -45,16 +45,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 16px;
+    padding: 20px;
   }
 
   .intro-card {
     background: var(--cream);
     border: 5px solid #1E293B;
     border-radius: 32px;
-    max-width: 820px;
+    max-width: 960px;
     width: 100%;
-    padding: 24px 28px;
+    padding: 24px 30px;
     box-shadow: 0 12px 0 #1E293B;
     text-align: center;
     animation: popIn 0.3s ease-out;
@@ -90,7 +90,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 16px;
     text-align: left;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
 
   .id-box {
@@ -98,6 +98,8 @@
     border: 3px solid #CBD5E1;
     border-radius: 20px;
     padding: 16px;
+    display: flex;
+    flex-direction: column;
   }
 
   .id-box h3 {
@@ -120,17 +122,59 @@
     margin-top: 4px;
   }
 
+  /* PANEL FOTO LANDSCAPE */
+  .photo-box {
+    grid-column: span 2;
+    background: #FFFFFF;
+    border: 3px solid #CBD5E1;
+    border-radius: 20px;
+    padding: 14px;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .photo-wrapper {
+    width: 100%;
+    max-height: 280px;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid #94A3B8;
+    margin-bottom: 10px;
+    background: #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .photo-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-caption {
+    font-size: 0.92rem;
+    color: #1E293B;
+    line-height: 1.5;
+  }
+
+  .photo-caption strong {
+    color: #1E3A8A;
+  }
+
   .btn-start-main {
     background: #16A34A;
     color: #FFFFFF;
     border: 4px solid #1E293B;
     border-radius: 50px;
-    padding: 12px 34px;
+    padding: 12px 36px;
     font-family: 'Fredoka', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     cursor: pointer;
     box-shadow: 0 6px 0 #1E293B;
     transition: transform 0.1s;
+    display: inline-block;
   }
 
   .btn-start-main:hover {
@@ -258,848 +302,4 @@
   }
 
   @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(30, 41, 59, 0.5); }
-    70% { box-shadow: 0 0 0 14px rgba(30, 41, 59, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(30, 41, 59, 0); }
-  }
-
-  .building-icon {
-    font-size: 3.2rem;
-    margin-bottom: 4px;
-    display: block;
-  }
-
-  .zone-title {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 3px;
-  }
-
-  .zone-sub {
-    font-size: 0.88rem;
-    color: #475569;
-    font-weight: 700;
-  }
-
-  .badge-done {
-    display: none;
-    margin-top: 6px;
-    background: #DCFCE7;
-    color: #166534;
-    padding: 3px 12px;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 800;
-  }
-
-  .bottom-action-bar {
-    text-align: center;
-    padding: 12px 20px 22px;
-    z-index: 5;
-  }
-
-  .btn-eval-launch {
-    background: #F59E0B;
-    color: #1E293B;
-    border: 4px solid #1E293B;
-    border-radius: 50px;
-    padding: 12px 30px;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.15rem;
-    cursor: pointer;
-    box-shadow: 0 6px 0 #1E293B;
-    transition: transform 0.1s;
-  }
-
-  .btn-eval-launch:hover {
-    background: #FBBF24;
-  }
-
-  /* ================= HALAMAN 3: EVALUASI PEMBELAJARAN ================= */
-  .eval-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-  }
-
-  .eval-card {
-    background: var(--cream);
-    border: 5px solid #1E293B;
-    border-radius: 30px;
-    max-width: 760px;
-    width: 100%;
-    padding: 26px;
-    box-shadow: 0 12px 0 #1E293B;
-  }
-
-  .eval-top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-    padding-bottom: 12px;
-    border-bottom: 3px dashed #CBD5E1;
-  }
-
-  .progress-pill {
-    background: #1E293B;
-    color: #FACC15;
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 0.95rem;
-  }
-
-  .question-box {
-    background: #FFFFFF;
-    border: 3px solid #CBD5E1;
-    border-radius: 20px;
-    padding: 20px;
-    font-size: 1.2rem;
-    font-weight: 800;
-    margin-bottom: 18px;
-    line-height: 1.5;
-  }
-
-  .options-list {
-    display: grid;
-    gap: 12px;
-  }
-
-  .option-btn {
-    background: #FFFFFF;
-    border: 3px solid #1E293B;
-    border-radius: 16px;
-    padding: 14px 18px;
-    text-align: left;
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.05rem;
-    font-weight: 800;
-    cursor: pointer;
-    box-shadow: 0 4px 0 #1E293B;
-    transition: background 0.15s, transform 0.1s;
-  }
-
-  .option-btn:hover {
-    background: #FEF3C7;
-    transform: translateX(4px);
-  }
-
-  /* ================= POP-UP OVERLAY (MATERI & UMPAN BALIK) ================= */
-  .modal-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.74);
-    z-index: 100;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-  }
-
-  .modal-overlay.active {
-    display: flex;
-    animation: popIn 0.22s ease-out;
-  }
-
-  @keyframes popIn {
-    from { transform: scale(0.9); opacity: 0; }
-    to { transform: scale(1); opacity: 1; }
-  }
-
-  .modal-box {
-    background: var(--cream);
-    border: 5px solid #1E293B;
-    border-radius: 28px;
-    max-width: 920px;
-    width: 100%;
-    max-height: 90vh;
-    overflow-y: auto;
-    box-shadow: 0 12px 0 #1E293B;
-  }
-
-  .modal-box.feedback-box {
-    max-width: 480px;
-    text-align: center;
-  }
-
-  .modal-header {
-    padding: 16px 24px;
-    color: #FFF;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 4px solid #1E293B;
-  }
-
-  .modal-header h2 {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.35rem;
-  }
-
-  .btn-close {
-    background: #EF4444;
-    color: #FFF;
-    border: 3px solid #1E293B;
-    border-radius: 50%;
-    width: 38px; height: 38px;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.15rem;
-    cursor: pointer;
-  }
-
-  .modal-body {
-    padding: 22px;
-    display: grid;
-    grid-template-columns: 1fr 1.35fr;
-    gap: 20px;
-  }
-
-  .modal-body.single-col {
-    grid-template-columns: 1fr;
-  }
-
-  .char-card {
-    background: #FFFFFF;
-    border: 3px solid #CBD5E1;
-    border-radius: 20px;
-    padding: 16px;
-    text-align: center;
-  }
-
-  .char-avatar {
-    width: 86px; height: 86px;
-    border-radius: 50%;
-    margin: 0 auto 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 3rem;
-    color: #FFF;
-    border: 4px solid #1E293B;
-  }
-
-  .concept-box {
-    background: #EFF6FF;
-    border-left: 5px solid #2563EB;
-    padding: 12px 14px;
-    border-radius: 12px;
-    text-align: left;
-    margin-top: 12px;
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .panel-section {
-    background: #FFFFFF;
-    border: 3px solid #CBD5E1;
-    border-radius: 20px;
-    padding: 16px;
-    margin-bottom: 14px;
-  }
-
-  .panel-section h3 {
-    font-family: 'Fredoka', sans-serif;
-    font-size: 1.1rem;
-    margin-bottom: 10px;
-  }
-
-  .sentence-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #F8FAFC;
-    border: 2px solid #E2E8F0;
-    padding: 10px 14px;
-    border-radius: 14px;
-    margin-bottom: 8px;
-    font-size: 1.02rem;
-    font-weight: 700;
-    gap: 10px;
-  }
-
-  .btn-audio {
-    background: #FACC15;
-    border: 2px solid #1E293B;
-    border-radius: 50px;
-    padding: 6px 14px;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 0.88rem;
-    cursor: pointer;
-    white-space: nowrap;
-    box-shadow: 0 3px 0 #1E293B;
-  }
-
-  .compare-box {
-    background: #FEFCE8;
-    border: 3px dashed #EAB308;
-    border-radius: 20px;
-    padding: 16px;
-  }
-
-  .toggle-btns {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 12px;
-  }
-
-  .btn-toggle {
-    flex: 1;
-    padding: 10px;
-    border: 3px solid #1E293B;
-    border-radius: 14px;
-    background: #FFF;
-    font-family: 'Fredoka', sans-serif;
-    font-size: 0.92rem;
-    cursor: pointer;
-  }
-
-  .btn-toggle.selected {
-    background: #1E293B;
-    color: #FDE047;
-  }
-
-  .compare-result {
-    background: #FFF;
-    border: 2px solid #1E293B;
-    border-radius: 14px;
-    padding: 12px;
-    text-align: center;
-  }
-
-  .compare-sentence {
-    font-size: 1.18rem;
-    font-weight: 800;
-    margin-bottom: 6px;
-  }
-
-  .compare-meaning {
-    font-size: 0.92rem;
-    color: #475569;
-  }
-
-  @media (max-width: 768px) {
-    .identity-grid, .map-canvas, .modal-body { grid-template-columns: 1fr; }
-    .road-ring { display: none; }
-  }
-</style>
-</head>
-<body>
-
-<!-- ==================== SCREEN 1: IDENTITAS MEDIA & KELOMPOK ==================== -->
-<section class="screen-section active" id="screenIntro">
-  <div class="intro-container">
-    <div class="intro-card">
-      <span class="badge-tag">📚 Media Pembelajaran Interaktif Bahasa Indonesia</span>
-      <h1>TAMAN KOTA TANDA BACA</h1>
-      <p class="intro-subtitle">Jelajah Interaktif Mengenal Tanda Baca Dasar (Titik, Koma, Tanya, Seru)</p>
-
-      <div class="identity-grid">
-        <div class="id-box">
-          <h3>📌 Identitas Media</h3>
-          <p><b>Mata Pelajaran:</b> Bahasa Indonesia</p>
-          <p><b>Sasaran:</b> Siswa Kelas II SD (Fase A)</p>
-          <p><b>Materi Pokok:</b> Fungsi &amp; Intonasi Tanda Baca (<code>.</code> <code>,</code> <code>?</code> <code>!</code>)</p>
-          <p><b>Jenis Media:</b> Web Interaktif Eksploratif</p>
-        </div>
-
-        <div class="id-box">
-          <h3>👥 Identitas Kelompok Penyusun</h3>
-          <p><b>Kelompok II (Kelas 5D):</b></p>
-          <ul>
-            <li>Ompypa Reva Ristyaningtyas</li>
-            <li>Rifa Dwi Saharani</li>
-            <li>Nabiila Zalfaa Az-Zahroo</li>
-            <li>Dea Violeta Maulana</li>
-            <li>Erni Suci Lestari</li>
-            <li>Ahmad Haris Nurudin</li>
-          </ul>
-        </div>
-      </div>
-
-      <button type="button" class="btn-start-main" onclick="goToScreen('screenMateri')">🚀 Mulai Jelajah Materi</button>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== SCREEN 2: MATERI INTI (PETA INTERAKTIF) ==================== -->
-<section class="screen-section" id="screenMateri">
-  <header>
-    <div class="nav-buttons">
-      <button type="button" class="btn-pill" onclick="goToScreen('screenIntro')">👥 Identitas</button>
-      <button type="button" class="btn-pill" onclick="openInfo('petunjuk')">❓ Petunjuk</button>
-      <button type="button" class="btn-pill" onclick="openInfo('capaian')">📋 Capaian</button>
-      <button type="button" class="btn-pill" onclick="openInfo('tujuan')">🎯 Tujuan</button>
-    </div>
-    <div class="title-board">
-      <h2>TAMAN KOTA TANDA BACA</h2>
-      <p>Klik bangunan di taman untuk mengenal tanda baca dan intonasinya!</p>
-    </div>
-    <button type="button" class="btn-pill" onclick="speakText('Selamat datang di Taman Kota Tanda Baca! Ayo klik salah satu bangunan untuk mengenal tanda baca dan cara membacanya!')">🔊 Sambutan</button>
-  </header>
-
-  <main class="map-canvas">
-    <div class="road-ring"></div>
-
-    <!-- Zona 1: Pak Titik -->
-    <div class="zone-card" onclick="openZone('titik')">
-      <div class="hotspot-pin" style="background: var(--titik);">.</div>
-      <span class="building-icon">🏠</span>
-      <div class="zone-title" style="color: var(--titik);">Rumah Istirahat Pak Titik</div>
-      <div class="zone-sub">Tanda Titik ( . ) — Kalimat Berita</div>
-      <span class="badge-done" id="badge-titik">✔ Sudah Dikunjungi</span>
-    </div>
-
-    <!-- Zona 3: Mas Tanya -->
-    <div class="zone-card" onclick="openZone('tanya')">
-      <div class="hotspot-pin" style="background: var(--tanya);">?</div>
-      <span class="building-icon">🗼</span>
-      <div class="zone-title" style="color: var(--tanya);">Menara Detektif Mas Tanya</div>
-      <div class="zone-sub">Tanda Tanya ( ? ) — Kalimat Tanya</div>
-      <span class="badge-done" id="badge-tanya">✔ Sudah Dikunjungi</span>
-    </div>
-
-    <!-- Zona 2: Kak Koma -->
-    <div class="zone-card" onclick="openZone('koma')">
-      <div class="hotspot-pin" style="background: var(--koma);">,</div>
-      <span class="building-icon">🌉</span>
-      <div class="zone-title" style="color: var(--koma);">Jembatan Tunggu Kak Koma</div>
-      <div class="zone-sub">Tanda Koma ( , ) — Jeda &amp; Perincian</div>
-      <span class="badge-done" id="badge-koma">✔ Sudah Dikunjungi</span>
-    </div>
-
-    <!-- Zona 4: Kapten Seru -->
-    <div class="zone-card" onclick="openZone('seru')">
-      <div class="hotspot-pin" style="background: var(--seru);">!</div>
-      <span class="building-icon">🚒</span>
-      <div class="zone-title" style="color: var(--seru);">Pos Komando Kapten Seru</div>
-      <div class="zone-sub">Tanda Seru ( ! ) — Perintah &amp; Kagum</div>
-      <span class="badge-done" id="badge-seru">✔ Sudah Dikunjungi</span>
-    </div>
-  </main>
-
-  <div class="bottom-action-bar">
-    <button type="button" class="btn-eval-launch" onclick="startEvaluation()">📝 Lanjut ke Evaluasi Pembelajaran (5 Soal) ➔</button>
-  </div>
-</section>
-
-<!-- ==================== SCREEN 3: EVALUASI PEMBELAJARAN ==================== -->
-<section class="screen-section" id="screenEvaluasi">
-  <div class="eval-container">
-    <div class="eval-card" id="evalCardContent"></div>
-  </div>
-</section>
-
-<!-- ==================== POP-UP OVERLAY (MATERI & UMPAN BALIK SOAL) ==================== -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal-box" id="modalBox">
-    <div class="modal-header" id="modalHeader">
-      <h2 id="modalTitle">Judul</h2>
-      <button type="button" class="btn-close" id="modalCloseBtn" onclick="closeModal()">X</button>
-    </div>
-    <div class="modal-body" id="modalBody"></div>
-  </div>
-</div>
-
-<script>
-  function goToScreen(screenId) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-    var sections = document.querySelectorAll('.screen-section');
-    for (var i = 0; i < sections.length; i++) {
-      sections[i].classList.remove('active');
-    }
-    document.getElementById(screenId).classList.add('active');
-    window.scrollTo(0, 0);
-  }
-
-  const zonesData = {
-    titik: {
-      title: "RUMAH ISTIRAHAT PAK TITIK ( . )",
-      color: "#2B6CB0",
-      symbol: ".",
-      charName: "Pak Titik",
-      introSpeech: "Halo! Aku Pak Titik. Bentukku bulat kecil dan selalu berada di ujung akhir kalimat. Kalau bertemu aku, berhentilah membaca dan turunkan nada suaramu.",
-      functionText: "Dipakai di <b>akhir kalimat berita</b> (pernyataan biasa).<br><b>Cara Membaca:</b> Berhenti penuh seperti lampu merah dan nada suara turun/datar.",
-      examples: [
-        { text: "Kucing itu tidur di atas sofa.", speech: "Kucing itu tidur di atas sofa." },
-        { text: "Siti menyiram bunga setiap sore.", speech: "Siti menyiram bunga setiap sore." }
-      ],
-      compare: {
-        labelA: "Tanpa Tanda Titik",
-        sentA: "Adik minum susu ibu memasak di dapur",
-        speechA: "Adik minum susu ibu memasak di dapur",
-        meanA: "Kalimat menyambung terus tanpa jeda sehingga membingungkan.",
-        labelB: "Dengan Tanda Titik ( . )",
-        sentB: "Adik minum susu. Ibu memasak di dapur.",
-        speechB: "Adik minum susu. ... Ibu memasak di dapur.",
-        meanB: "Ada jeda berhenti penuh setelah kata 'susu' sehingga makna jelas."
-      }
-    },
-    koma: {
-      title: "JEMBATAN TUNGGU KAK KOMA ( , )",
-      color: "#D97706",
-      symbol: ",",
-      charName: "Kak Koma",
-      introSpeech: "Hai teman-teman! Aku Kak Koma. Aku tinggal di tengah kalimat. Kalau bertemu aku, berhenti sebentar saja seperti lampu kuning, lalu lanjutkan membaca!",
-      functionText: "Dipakai di <b>tengah kalimat</b> untuk memisahkan perincian benda/nama atau kata panggilan.<br><b>Cara Membaca:</b> Berhenti sebentar (jeda singkat 1 ketukan).",
-      examples: [
-        { text: "Ibu membeli apel, jeruk, dan mangga.", speech: "Ibu membeli apel, jeruk, dan mangga." },
-        { text: "Budi, tolong ambilkan buku itu.", speech: "Budi, tolong ambilkan buku itu." }
-      ],
-      compare: {
-        labelA: "Tanpa Koma",
-        sentA: "Ayo kita makan Kakek.",
-        speechA: "Ayo kita makan Kakek.",
-        meanA: "Wah bahaya! Artinya Kakek yang akan dimakan!",
-        labelB: "Dengan Koma ( , )",
-        sentB: "Ayo kita makan, Kakek.",
-        speechB: "Ayo kita makan, ... Kakek.",
-        meanB: "Artinya mengajak Kakek untuk makan bersama."
-      }
-    },
-    tanya: {
-      title: "MENARA DETEKTIF MAS TANYA ( ? )",
-      color: "#0D9488",
-      symbol: "?",
-      charName: "Mas Tanya",
-      introSpeech: "Halo Detektif Cilik! Aku Mas Tanya. Aku selalu muncul di akhir kalimat saat kamu ingin menanyakan sesuatu. Ingat ya, naikkan nada suaramu di ujung kalimat!",
-      functionText: "Dipakai di <b>akhir kalimat tanya</b> (sering memakai kata: <i>apa, siapa, di mana, kapan, mengapa, bagaimana</i>).<br><b>Cara Membaca:</b> Nada suara <b>naik</b> di akhir kalimat.",
-      examples: [
-        { text: "Di mana kamu membeli tas baru itu?", speech: "Di mana kamu membeli tas baru itu?" },
-        { text: "Kapan kita berangkat kerja bakti?", speech: "Kapan kita berangkat kerja bakti?" }
-      ],
-      compare: {
-        labelA: "Kalimat Berita ( . )",
-        sentA: "Kamu sudah sarapan.",
-        speechA: "Kamu sudah sarapan.",
-        meanA: "Nada datar: Memberitahu bahwa kamu sudah sarapan.",
-        labelB: "Kalimat Tanya ( ? )",
-        sentB: "Kamu sudah sarapan?",
-        speechB: "Kamu sudah sarapan?",
-        meanB: "Nada naik di akhir: Menanyakan apakah kamu sudah sarapan."
-      }
-    },
-    seru: {
-      title: "POS KOMANDO KAPTEN SERU ( ! )",
-      color: "#DC2626",
-      symbol: "!",
-      charName: "Kapten Seru",
-      introSpeech: "Siap gerak! Aku Kapten Seru! Aku dipakai di akhir kalimat perintah atau saat kamu merasa kagum dan kaget. Bacalah aku dengan suara yang tegas dan bersemangat!",
-      functionText: "Dipakai di <b>akhir kalimat perintah, ajakan, larangan</b>, atau ungkapan rasa kaget dan kagum.<br><b>Cara Membaca:</b> Nada suara <b>tegas, kuat, atau penuh ekspresi</b>.",
-      examples: [
-        { text: "Tolong tutup pintu kelas itu!", speech: "Tolong tutup pintu kelas itu!" },
-        { text: "Wah, indah sekali pemandangan gunung ini!", speech: "Wah, indah sekali pemandangan gunung ini!" }
-      ],
-      compare: {
-        labelA: "Kalimat Biasa ( . )",
-        sentA: "Jangan berlari di lorong.",
-        speechA: "Jangan berlari di lorong.",
-        meanA: "Diucapkan datar tanpa penekanan perintah.",
-        labelB: "Kalimat Perintah ( ! )",
-        sentB: "Jangan berlari di lorong!",
-        speechB: "Jangan berlari di lorong!",
-        meanB: "Diucapkan tegas untuk memperingatkan agar tidak berlari."
-      }
-    }
-  };
-
-  let currentCompare = null;
-
-  function speakText(text) {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.lang = 'id-ID';
-      utterance.rate = 0.95;
-      window.speechSynthesis.speak(utterance);
-    }
-  }
-
-  function openZone(key) {
-    const data = zonesData[key];
-    currentCompare = data.compare;
-    document.getElementById('badge-' + key).style.display = 'inline-block';
-
-    const modalBox = document.getElementById('modalBox');
-    const header = document.getElementById('modalHeader');
-    const body = document.getElementById('modalBody');
-
-    modalBox.classList.remove('feedback-box');
-    document.getElementById('modalCloseBtn').style.display = 'block';
-    header.style.background = data.color;
-    document.getElementById('modalTitle').innerText = data.title;
-    body.classList.remove('single-col');
-
-    let examplesHTML = data.examples.map((ex, i) => `
-      <div class="sentence-item">
-        <span>${i + 1}. "${ex.text}"</span>
-        <button type="button" class="btn-audio" onclick="speakText('${ex.speech}')">🔊 Dengar</button>
-      </div>
-    `).join('');
-
-    body.innerHTML = `
-      <div class="char-card">
-        <div class="char-avatar" style="background: ${data.color};">${data.symbol}</div>
-        <h3 style="font-family:'Fredoka',sans-serif; font-size:1.3rem;">${data.charName}</h3>
-        <button type="button" class="btn-audio" style="margin-top:8px;" onclick="speakText('${data.introSpeech}')">🔊 Kenalan Yuk!</button>
-        <div class="concept-box">${data.functionText}</div>
-      </div>
-      <div>
-        <div class="panel-section">
-          <h3>📖 Contoh Kalimat &amp; Cara Membaca</h3>
-          ${examplesHTML}
-        </div>
-        <div class="compare-box">
-          <h3 style="font-family:'Fredoka',sans-serif; margin-bottom:8px;">🔄 Bandingkan Bedanya!</h3>
-          <div class="toggle-btns">
-            <button type="button" class="btn-toggle selected" id="btnTogA" onclick="selectCompare('A')">${data.compare.labelA}</button>
-            <button type="button" class="btn-toggle" id="btnTogB" onclick="selectCompare('B')">${data.compare.labelB}</button>
-          </div>
-          <div class="compare-result">
-            <div class="compare-sentence" id="compSent">"${data.compare.sentA}"</div>
-            <div class="compare-meaning" id="compMean">${data.compare.meanA}</div>
-            <button type="button" class="btn-audio" style="margin-top:10px;" id="compAudioBtn" onclick="speakText('${data.compare.speechA}')">🔊 Putar Perbandingan</button>
-          </div>
-        </div>
-      </div>
-    `;
-
-    document.getElementById('modalOverlay').classList.add('active');
-  }
-
-  function selectCompare(choice) {
-    if (!currentCompare) return;
-    document.getElementById('btnTogA').classList.toggle('selected', choice === 'A');
-    document.getElementById('btnTogB').classList.toggle('selected', choice === 'B');
-
-    const sent = choice === 'A' ? currentCompare.sentA : currentCompare.sentB;
-    const mean = choice === 'A' ? currentCompare.meanA : currentCompare.meanB;
-    const speech = choice === 'A' ? currentCompare.speechA : currentCompare.speechB;
-
-    document.getElementById('compSent').innerText = `"${sent}"`;
-    document.getElementById('compMean').innerText = mean;
-    document.getElementById('compAudioBtn').setAttribute('onclick', `speakText('${speech}')`);
-    speakText(speech);
-  }
-
-  function openInfo(type) {
-    const modalBox = document.getElementById('modalBox');
-    const header = document.getElementById('modalHeader');
-    const body = document.getElementById('modalBody');
-
-    modalBox.classList.remove('feedback-box');
-    document.getElementById('modalCloseBtn').style.display = 'block';
-    body.classList.add('single-col');
-
-    if (type === 'petunjuk') {
-      header.style.background = "#0D9488";
-      document.getElementById('modalTitle').innerText = "❓ PETUNJUK BELAJAR";
-      body.innerHTML = `
-        <div class="panel-section" style="font-size:1.05rem; line-height:1.7;">
-          <p>1. <b>Klik salah satu bangunan</b> di Taman Kota Tanda Baca.</p>
-          <p>2. Tekan tombol <b>🔊 Kenalan Yuk!</b> untuk mendengarkan penjelasan penjaga taman.</p>
-          <p>3. Tekan tombol <b>🔊 Dengar</b> di samping kalimat contoh untuk melatih intonasi.</p>
-          <p>4. Coba fitur <b>Bandingkan Bedanya!</b> untuk melihat bagaimana tanda baca mengubah makna kalimat.</p>
-          <p>5. Setelah menjelajahi semua bangunan, klik tombol <b>Lanjut ke Evaluasi Pembelajaran</b> di bagian bawah.</p>
-        </div>
-      `;
-    } else if (type === 'capaian') {
-      header.style.background = "#2B6CB0";
-      document.getElementById('modalTitle').innerText = "📋 CAPAIAN PEMBELAJARAN (FASE A — KELAS II SD)";
-      body.innerHTML = `
-        <div class="panel-section" style="font-size:1.03rem; line-height:1.7;">
-          <p style="margin-bottom:8px;"><b>Mata Pelajaran:</b> Bahasa Indonesia (Fase A / Kelas II SD)</p>
-          <div style="background:#EFF6FF; border-left:5px solid #2B6CB0; padding:12px 14px; border-radius:12px; margin-bottom:10px;">
-            <p><b>Elemen Membaca dan Memirsa:</b><br>
-            Peserta didik mampu membaca kata-kata yang dikenalinya sehari-hari dengan fasih serta memahami informasi dari bacaan dan tayangan yang dipirsa tentang diri dan lingkungan, narasi imajinatif, dan puisi anak dengan memperhatikan <b>penggunaan tanda baca dasar dan intonasi yang tepat</b>.</p>
-          </div>
-          <div style="background:#FEFCE8; border-left:5px solid #D97706; padding:12px 14px; border-radius:12px;">
-            <p><b>Elemen Menulis:</b><br>
-            Peserta didik mampu menunjukkan keterampilan menulis permulaan dengan benar dan mengembangkan tulisan tangan yang semakin baik, termasuk <b>menerapkan tanda baca titik (.), koma (,), tanda tanya (?), dan tanda seru (!)</b> pada kalimat sederhana sesuai konteks.</p>
-          </div>
-        </div>
-      `;
-    } else {
-      header.style.background = "#0D9488";
-      document.getElementById('modalTitle').innerText = "🎯 TUJUAN PEMBELAJARAN";
-      body.innerHTML = `
-        <div class="panel-section" style="font-size:1.05rem; line-height:1.7;">
-          <p>Setelah menjelajahi <b>Taman Kota Tanda Baca</b>, siswa diharapkan mampu:</p>
-          <ul style="margin-left:20px; margin-top:8px;">
-            <li>Mengenal bentuk dan nama tanda titik (<b>.</b>), koma (<b>,</b>), tanda tanya (<b>?</b>), dan tanda seru (<b>!</b>).</li>
-            <li>Memahami fungsi penggunaan masing-masing tanda baca dalam kalimat.</li>
-            <li>Membaca kalimat berita, tanya, perintah, dan perincian dengan intonasi serta jeda yang tepat.</li>
-          </ul>
-        </div>
-      `;
-    }
-    document.getElementById('modalOverlay').classList.add('active');
-  }
-
-  function closeModal() {
-    if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-    }
-    document.getElementById('modalOverlay').classList.remove('active');
-  }
-
-  const quizQuestions = [
-    {
-      q: "1. Tanda baca yang digunakan di akhir kalimat berita atau pernyataan biasa adalah ...",
-      options: ["A. Tanda tanya ( ? )", "B. Tanda titik ( . )", "C. Tanda seru ( ! )"],
-      correctIndex: 1,
-      explainCorrect: "Tepat sekali! Tanda titik ( . ) dipakai di akhir kalimat berita dan dibaca dengan berhenti penuh.",
-      explainWrong: "Kurang tepat. Tanda tanya (?) untuk bertanya, sedangkan tanda seru (!) untuk perintah. Kalimat berita diakhiri tanda titik ( . )."
-    },
-    {
-      q: "2. Perhatikan kalimat berikut: \"Di mana rumah nenekmu___\" Tanda baca yang tepat untuk melengkapi kalimat tersebut adalah ...",
-      options: ["A. Tanda tanya ( ? )", "B. Tanda titik ( . )", "C. Tanda koma ( , )"],
-      correctIndex: 0,
-      explainCorrect: "Hebat! Kalimat tersebut memakai kata tanya 'Di mana', sehingga harus diakhiri tanda tanya ( ? ).",
-      explainWrong: "Belum tepat. Karena diawali kata tanya 'Di mana' untuk menanyakan tempat, akhir kalimat harus memakai tanda tanya ( ? )."
-    },
-    {
-      q: "3. \"Tolong tutup pintu kelas itu___\" Tanda baca yang tepat untuk kalimat perintah tersebut adalah ...",
-      options: ["A. Tanda koma ( , )", "B. Tanda tanya ( ? )", "C. Tanda seru ( ! )"],
-      correctIndex: 2,
-      explainCorrect: "Benar! Kalimat perintah atau ajakan diakhiri dengan tanda seru ( ! ) dan dibaca dengan nada tegas.",
-      explainWrong: "Ups, belum tepat. Kalimat perintah seperti 'Tolong tutup pintu...' menggunakan tanda seru ( ! ) di akhir kalimat."
-    },
-    {
-      q: "4. Manakah penulisan tanda koma ( , ) yang benar untuk memisahkan perincian benda?",
-      options: [
-        "A. Ibu membeli buku, pensil, dan penghapus.",
-        "B. Ibu membeli buku pensil dan, penghapus.",
-        "C. Ibu, membeli buku pensil dan penghapus."
-      ],
-      correctIndex: 0,
-      explainCorrect: "Bagus sekali! Tanda koma diletakkan setelah setiap benda yang dirinci sebelum kata 'dan'.",
-      explainWrong: "Kurang tepat. Tanda koma ( , ) dipakai di antara benda-benda yang dirinci: 'buku, pensil, dan penghapus.'"
-    },
-    {
-      q: "5. Bagaimana cara membaca kalimat yang diakhiri tanda tanya ( ? )?",
-      options: [
-        "A. Nada suara datar dan berhenti lama",
-        "B. Nada suara naik di akhir kalimat",
-        "C. Nada suara berteriak sangat keras"
-      ],
-      correctIndex: 1,
-      explainCorrect: "Luar biasa! Saat bertemu tanda tanya ( ? ), nada suara kita naik di ujung akhir kalimat.",
-      explainWrong: "Belum tepat. Kalimat tanya dibaca dengan intonasi atau nada suara yang naik di bagian akhir kalimat."
-    }
-  ];
-
-  let currentQIndex = 0;
-  let score = 0;
-
-  function startEvaluation() {
-    currentQIndex = 0;
-    score = 0;
-    goToScreen('screenEvaluasi');
-    renderQuestion();
-  }
-
-  function renderQuestion() {
-    const container = document.getElementById('evalCardContent');
-    const item = quizQuestions[currentQIndex];
-
-    let optionsHTML = item.options.map((opt, idx) => `
-      <button type="button" class="option-btn" onclick="checkAnswer(${idx})">${opt}</button>
-    `).join('');
-
-    container.innerHTML = `
-      <div class="eval-top-bar">
-        <button type="button" class="btn-pill" onclick="goToScreen('screenMateri')">⬅ Kembali ke Peta</button>
-        <span class="progress-pill">Soal ${currentQIndex + 1} dari ${quizQuestions.length}</span>
-      </div>
-      <div class="question-box">${item.q}</div>
-      <div class="options-list">${optionsHTML}</div>
-    `;
-  }
-
-  function checkAnswer(selectedIndex) {
-    const item = quizQuestions[currentQIndex];
-    const isCorrect = selectedIndex === item.correctIndex;
-    if (isCorrect) score += 20;
-
-    const modalBox = document.getElementById('modalBox');
-    const header = document.getElementById('modalHeader');
-    const body = document.getElementById('modalBody');
-
-    modalBox.classList.add('feedback-box');
-    document.getElementById('modalCloseBtn').style.display = 'none';
-    body.classList.add('single-col');
-
-    if (isCorrect) {
-      header.style.background = "#16A34A";
-      document.getElementById('modalTitle').innerText = "🎉 JAWABAN BENAR!";
-      speakText("Hebat! Jawabanmu benar.");
-      body.innerHTML = `
-        <div style="padding: 10px;">
-          <div style="font-size: 4rem; margin-bottom: 8px;">🌟</div>
-          <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 18px; line-height: 1.5;">${item.explainCorrect}</p>
-          <button type="button" class="btn-start-main" style="padding: 10px 26px; font-size: 1.05rem;" onclick="nextQuestion()">
-            ${currentQIndex < quizQuestions.length - 1 ? "Lanjut Soal Berikutnya ➔" : "Lihat Skor Akhir 🏆"}
-          </button>
-        </div>
-      `;
-    } else {
-      header.style.background = "#DC2626";
-      document.getElementById('modalTitle').innerText = "❌ JAWABAN SALAH";
-      speakText("Ups, jawabanmu belum tepat.");
-      body.innerHTML = `
-        <div style="padding: 10px;">
-          <div style="font-size: 4rem; margin-bottom: 8px;">🤔</div>
-          <p style="font-size: 1.05rem; font-weight: 700; margin-bottom: 18px; line-height: 1.5;">${item.explainWrong}</p>
-          <button type="button" class="btn-eval-launch" style="padding: 10px 26px; font-size: 1.05rem;" onclick="nextQuestion()">
-            ${currentQIndex < quizQuestions.length - 1 ? "Lanjut Soal Berikutnya ➔" : "Lihat Skor Akhir 🏆"}
-          </button>
-        </div>
-      `;
-    }
-
-    document.getElementById('modalOverlay').classList.add('active');
-  }
-
-  function nextQuestion() {
-    closeModal();
-    currentQIndex++;
-    if (currentQIndex < quizQuestions.length) {
-      renderQuestion();
-    } else {
-      renderResult();
-    }
-  }
-
-  function renderResult() {
-    const container = document.getElementById('evalCardContent');
-    let message = score >= 80
-      ? "Luar biasa! Kamu sudah sangat paham cara menggunakan dan membaca tanda baca."
-      : "Bagus! Ayo jelajahi kembali Taman Kota Tanda Baca supaya nilaimu makin sempurna.";
-
-    speakText(`Evaluasi selesai! Nilai akhir kamu adalah ${score}.`);
-
-    container.innerHTML = `
-      <div style="text-align: center; padding: 14px;">
-        <div style="font-size: 4.5rem; margin-bottom: 8px;">🏆</div>
-        <h2 style="font-family:'Fredoka',sans-serif; font-size: 1.8rem; color: #1E3A8A; margin-bottom: 8px;">EVALUASI SELESAI!</h2>
-        <div style="display:inline-block; background:#FACC15; border:4px solid #1E293B; border-radius:20px; padding:12px 32px; margin: 12px 0;">
-          <div style="font-size: 0.95rem; font-weight: 800;">SKOR AKHIR KAMU</div>
-          <div style="font-family:'Fredoka',sans-serif; font-size: 2.8rem; color: #1E293B;">${score} / 100</div>
-        </div>
-        <p style="font-size: 1.05rem; font-weight: 700; color: #334155; margin: 12px 0 22px;">${message}</p>
-        <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
-          <button type="button" class="btn-pill" style="padding: 12px 22px; font-size: 1rem;" onclick="startEvaluation()">🔄 Ulangi Evaluasi</button>
-          <button type="button" class="btn-start-main" style="padding: 12px 24px; font-size: 1rem;" onclick="goToScreen('screenMateri')">🗺️ Kembali ke Peta Materi</button>
-        </div>
-      </div>
-    `;
-  }
-</script>
-</body>
-</html>
+    0% { box-shadow: 0 0 0 0 rgba(30, 41, 59, 0.5
